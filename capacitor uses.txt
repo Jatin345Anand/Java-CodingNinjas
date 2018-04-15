@@ -1,0 +1,11 @@
+capicitors has many uses in removing noise ,filterring ,etc,u will understand after studing filters
+
+skranish
+3 years ago
+In addition to being used in filter circuits in combination with resistors and inductors, capacitors have the characteristic of only passing AC (alternating current) and blocking DC (direct current, as produced by a constant voltage source). This can be especially useful in a variety of circuits.
+Capacitors can also be used as energy storage devices, much like a battery. Large capacity capacitors are used as part of AC to DC converter circuits, to smooth out the output voltage. When the incoming voltage is high, current is supplied from the voltage source, but when it is low, current is supplied from the capacitors.
+
+theyatin
+3 years ago
+simple example boy capacitors are used in fan above your head . . .
+most common use of capacitors.
