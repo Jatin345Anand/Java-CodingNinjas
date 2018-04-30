@@ -1,0 +1,28 @@
+ 
+#include<iostream>
+using namespace std;
+void printPatt(int n)
+{
+int i,j,k,l,d;
+for(i=1;i<=n;i++)
+{
+    d=i;
+    for(j=1;j<=n-i;j++)
+    {
+        cout<<" ";
+    }
+    for(k=1;k<=i;k++)
+    {
+        cout<<d;
+        d++;
+    }
+    d--;
+    d--;
+    for(k=1;k<=i-1;k++)
+    {
+        cout<<d;
+        d--;
+    }
+    cout<<"\n";
+}
+}

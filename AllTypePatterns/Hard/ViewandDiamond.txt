@@ -1,0 +1,130 @@
+ 
+void printPatt(int n)
+{
+      if(n%2!=0)
+    {
+  int i,j,k,l;
+    for(i=0;i<n;i++)
+    {
+        cout<<"*";
+    }
+    cout<<"\n";
+    int L=0,lk=1;
+    for(i=n/2;i>=2;i--)
+    {
+        for(j=0;j<i;j++)
+        {
+            cout<<"*";
+        }
+
+        for(k=1;k<=lk;k++)
+        {
+            cout<<" ";
+        }
+        for(j=0;j<i;j++)
+        {
+            cout<<"*";
+        }
+        cout<<"\n";
+        L=L+1;
+        lk=lk+1;
+    }
+    cout<<"*";
+    for(i=1;i<=n/2;i++)
+    {
+        cout<<" ";
+    }
+    cout<<"*"<<"\n";
+    int nq=2,ne=(n/2)-1;
+     for(i=(n/2)+2;i<=n-1;i++)
+     {
+         for(j=1;j<=nq;j++)
+         {
+             cout<<"*";
+         }
+         for(k=ne;k>=1;k--)
+         {
+             cout<<" ";
+         }
+         for(j=1;j<=nq;j++)
+         {
+             cout<<"*";
+         }
+         cout<<"\n";
+         ne=ne-1;
+         nq=nq+1;
+     }
+
+   for(i=1;i<=n;i++)
+   {
+       cout<<"*";
+   }
+
+
+
+
+}
+else
+{
+    int n1=n+1;
+  int i,j,k,l;
+    for(i=0;i<n1;i++)
+    {
+        cout<<"*";
+    }
+    cout<<"\n";
+    int L=0,lk=1;
+    for(i=n1/2;i>=2;i--)
+    {
+        for(j=0;j<i;j++)
+        {
+            cout<<"*";
+        }
+
+        for(k=1;k<=lk;k++)
+        {
+            cout<<" ";
+        }
+        for(j=0;j<i;j++)
+        {
+            cout<<"*";
+        }
+        cout<<"\n";
+        L=L+1;
+        lk=lk+1;
+    }
+    cout<<"*";
+    for(i=1;i<=n1/2;i++)
+    {
+        cout<<" ";
+    }
+    cout<<"*"<<"\n";
+    int nq=2,ne=(n1/2)-1;
+     for(i=(n1/2)+2;i<=n1-1;i++)
+     {
+         for(j=1;j<=nq;j++)
+         {
+             cout<<"*";
+         }
+         for(k=ne;k>=1;k--)
+         {
+             cout<<" ";
+         }
+         for(j=1;j<=nq;j++)
+         {
+             cout<<"*";
+         }
+         cout<<"\n";
+         ne=ne-1;
+         nq=nq+1;
+     }
+
+   for(i=1;i<=n1;i++)
+   {
+       cout<<"*";
+   }
+
+
+}
+
+}

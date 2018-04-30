@@ -1,0 +1,181 @@
+void printPatt(int n)
+{
+       if(n%2!=0)
+    {
+    int i,j,k,l,m;
+     int num,r,c;
+     int M,N,s=0,s1=1;
+     M=((2*(n-2))-1);
+       char ch='*',st=' ';
+    cout<<"*";
+    for(int l1=1;l1<=(2*(n-1)-1);l1++)
+    {
+        cout<<" ";
+    }
+    cout<<"*"<<"\n";
+    for(i=2; i<=n-1; i++)
+   {
+    for(j=i; j>=1; j--)
+     {
+      if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+     }
+  for(k=1;k<=M-s;k++)
+  {
+      cout<<" ";
+  }
+  for(j=i; j>=1; j--)
+     if(i%2==0)
+        {
+         if(j%2==0)
+         cout<< ch;
+        else
+         cout<<st;
+       }
+    else if(i%2!=0)
+    {
+        if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+    }
+  cout<<"\n";
+  s=s+2;
+}
+//cout<<"\n";
+for(i=1;i<=((2*n)-1)/2+1;i++)
+{
+    cout<<"*"<<" ";
+}
+cout<<"\n";
+ for(i=n-1; i>=2; i--)
+   {
+    for(j=i; j>=1; j--)
+     {
+      if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+     }
+  for(k=1;k<=s1;k++)
+  {
+      cout<<" ";
+  }
+  for(j=i; j>=1; j--)
+     if(i%2==0)
+        {
+         if(j%2==0)
+         cout<< ch;
+        else
+         cout<<st;
+       }
+    else if(i%2!=0)
+    {
+        if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+    }
+  cout<<"\n";
+  s1=s1+2;
+}
+cout<<"*";
+    for(int l1=1;l1<=(2*(n-1)-1);l1++)
+    {
+        cout<<" ";
+    }
+    cout<<"*";
+    }
+else
+{
+    int i,j,k,l,m;
+     int num,r,c;
+     int M,N,s=0,s1=1;
+     M=((2*(n-2))-1);
+       char ch='*',st=' ';
+    cout<<"*";
+    for(int l1=1;l1<=(2*(n-1)-1);l1++)
+    {
+        cout<<" ";
+    }
+    cout<<"*"<<"\n";
+    for(i=2; i<=n-1; i++)
+   {
+    for(j=i; j>=1; j--)
+     {
+      if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+     }
+  for(k=1;k<=M-s;k++)
+  {
+      cout<<" ";
+  }
+  for(j=i; j>=1; j--)
+     if(i%2==0)
+        {
+         if(j%2==0)
+         cout<< ch;
+        else
+         cout<<st;
+       }
+    else if(i%2!=0)
+    {
+        if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+    }
+  cout<<"\n";
+  s=s+2;
+}
+//cout<<"\n";
+for(i=1;i<=((2*n)-1)/2;i++)
+{
+    cout<<" "<<"*";
+}
+cout<<"\n";
+ for(i=n-1; i>=2; i--)
+   {
+    for(j=i; j>=1; j--)
+     {
+      if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+     }
+  for(k=1;k<=s1;k++)
+  {
+      cout<<" ";
+  }
+  for(j=i; j>=1; j--)
+     if(i%2==0)
+        {
+         if(j%2==0)
+         cout<< ch;
+        else
+         cout<<st;
+       }
+    else if(i%2!=0)
+    {
+        if(j%2==0)
+        cout<< st;
+      else
+        cout<<ch;
+    }
+  cout<<"\n";
+  s1=s1+2;
+}
+cout<<"*";
+    for(int l1=1;l1<=(2*(n-1)-1);l1++)
+    {
+        cout<<" ";
+    }
+    cout<<"*";
+}
+
+
+}
