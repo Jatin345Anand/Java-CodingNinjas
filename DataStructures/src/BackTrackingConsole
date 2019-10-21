@@ -1,0 +1,171 @@
+function isOtherQueeninSameColumn(R, C, ChessBoard) {
+    var ans1 = true, ans2 = true;
+    if (R > 0) {
+        for (var i = 0; i < R; i++) {
+            if (ChessBoard[i][C] == 1) {
+                ans1 = false;
+            }
+        }
+    }
+    if (R < ChessBoard.length - 1) {
+        for (var i = R + 1; i < ChessBoard.length; i++) {
+            if (ChessBoard[i][C] == 1) {
+                ans2 = false;
+            }
+        }
+    }
+
+    return ans1 && ans2;
+}
+function isOtherQueeninSameRow(R, C, ChessBoard) {
+    var ans1 = true, ans2 = true;
+    if (C > 0) {
+        for (var i = 0; i < C; i++) {
+            if (ChessBoard[R][i] == 1) {
+                ans1 = false;
+            }
+        }
+    }
+
+    if (C < ChessBoard.length - 1) {
+        for (var i = C + 1; i < ChessBoard.length; i++) {
+            if (ChessBoard[R][i] == 1) {
+                ans2 = false;
+            }
+        }
+    }
+
+    return ans1 && ans2;
+}
+function isOtherQueeninDiagonal(rIndex, cIndex, ChessBoard) {
+    var ans1 = true, ans2 = true, ans3 = true, ans4 = true;
+    if (rIndex > 0 && cIndex > 0) {
+        for (var i = rIndex - 1, j = cIndex - 1; i >= 0 && j >= 0; i-- , j--) {
+            if (ChessBoard[i][j] == 1) {
+                ans1 = false;
+            }
+        }
+    }
+    if (rIndex > 0 && cIndex < ChessBoard.length - 1) {
+        for (var i = rIndex - 1, j = cIndex + 1; i >= 0 && j < ChessBoard.length; i-- , j++) {
+            if (ChessBoard[i][j] == 1) {
+                ans3 = false;
+            }
+        }
+    }
+    if (cIndex > 0 && rIndex < ChessBoard.length - 1) {
+        for (var i = rIndex + 1, j = cIndex - 1; i < ChessBoard.length && j >= 0; i++ , j--) {
+            if (ChessBoard[i][j] == 1) {
+                ans4 = false;
+            }
+        }
+    }
+    if (rIndex < ChessBoard.length - 1 && cIndex < ChessBoard.length - 1) {
+        for (var i = rIndex + 1, j = cIndex + 1; i < ChessBoard.length && j < ChessBoard.length; i++ , j++) {
+            if (ChessBoard[i][j] == 1) {
+                ans2 = false;
+            }
+        }
+
+    }
+    return ans1 && ans2 && ans3 && ans4;
+}
+function isRowhasOneQueen(Row) {
+    var ans = false;
+    for (var i = 0; i < Row.length; i++) {
+        if (Row[i] == 1) {
+            ans = true;
+            break;
+        }
+    }
+    return ans;
+}
+function isChessBoardContainsNQueens(Board) {
+    var ans = false;
+    var count = 0;
+    for (var i = 0; i < Board.length; i++) {
+        if (isRowhasOneQueen(Board[i])) {
+            count++;
+        }
+    }
+    if (count == Board.length) {
+        ans = true;
+    }
+    return ans;
+}
+function placeNQueens(ChessBoard, GivenRow, FilledrowNumber) {
+    if (GivenRow == FilledrowNumber && isChessBoardContainsNQueens(ChessBoard)) {
+        console.log("Great !!");
+        for (var i = 0; i < ChessBoard.length; i++) {
+            for (var j = 0; j < ChessBoard[i].length; j++) {
+                console.log(ChessBoard[i][j] + " ");
+            }
+            console.log();
+        }
+        return;
+    }
+
+    for (var i = 0; i < ChessBoard[FilledrowNumber].length; i++) {
+        if (isOtherQueeninDiagonal(FilledrowNumber, i, ChessBoard) && isOtherQueeninSameRow(FilledrowNumber, i, ChessBoard) && isOtherQueeninSameColumn(FilledrowNumber, i, ChessBoard)) {
+            ChessBoard[FilledrowNumber][i] = 1;
+
+            placeNQueens(ChessBoard, GivenRow, FilledrowNumber + 1);
+        }
+    }
+}
+undefined
+placeNQueens(map,4,0);
+undefined
+map
+(4) [Array(4), Array(4), Array(4), Array(4)]
+0: (4) [1, 0, 0, 0]
+1: (4) [0, 0, 1, 0]
+2: (4) [0, 0, 0, 0]
+3: (4) [0, 0, 0, 0]
+length: 4
+__proto__: Array(0)
+var x, x_length = 5
+  , y, y_length = 5
+  , map = []
+
+// Don't be lazy
+for (x = 0; x < x_length; x++) {
+  map[x] = []
+  for (y = 0; y < y_length; y++) {
+    map[x][y] =0  }
+}
+0
+map
+(5) [Array(5), Array(5), Array(5), Array(5), Array(5)]
+0: (5) [0, 0, 0, 0, 0]
+1: (5) [0, 0, 0, 0, 0]
+2: (5) [0, 0, 0, 0, 0]
+3: (5) [0, 0, 0, 0, 0]
+4: (5) [0, 0, 0, 0, 0]
+length: 5
+__proto__: Array(0)
+placeNQueens(map,5,0)
+VM292:98 Great !!
+VM292:101 1 
+6
+VM292:101 0 
+VM292:101 1 
+6
+VM292:101 0 
+VM292:101 1 
+VM292:101 0 
+VM292:101 1 
+6
+VM292:101 0 
+VM292:101 1 
+VM292:101 0 
+undefined
+map
+(5) [Array(5), Array(5), Array(5), Array(5), Array(5)]
+0: (5) [1, 0, 0, 0, 0]
+1: (5) [0, 0, 1, 0, 0]
+2: (5) [0, 0, 0, 0, 1]
+3: (5) [0, 1, 0, 0, 0]
+4: (5) [0, 0, 0, 1, 0]
+length: 5
+__proto__: Array(0)
