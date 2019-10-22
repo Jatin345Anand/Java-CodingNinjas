@@ -100,19 +100,24 @@ function placeNQueens(ChessBoard, GivenRow, FilledrowNumber) {
             for (var j = 0; j < ChessBoard[i].length; j++) {
                 console.log(ChessBoard[i][j] + " ");
             }
-            console.log();
+        
         }
-        return;
+        console.log();
+        return false;
     }
 
     for (var i = 0; i < ChessBoard[FilledrowNumber].length; i++) {
         if (isOtherQueeninDiagonal(FilledrowNumber, i, ChessBoard) && isOtherQueeninSameRow(FilledrowNumber, i, ChessBoard) && isOtherQueeninSameColumn(FilledrowNumber, i, ChessBoard)) {
             ChessBoard[FilledrowNumber][i] = 1;
 
-            placeNQueens(ChessBoard, GivenRow, FilledrowNumber + 1);
+            if(placeNQueens(ChessBoard, GivenRow, FilledrowNumber + 1)){
+                return true;
+            }
+            ChessBoard[FilledrowNumber][i]=0;
         }
     }
-}
+    return false;
+} 
 undefined
 placeNQueens(map,4,0);
 undefined
