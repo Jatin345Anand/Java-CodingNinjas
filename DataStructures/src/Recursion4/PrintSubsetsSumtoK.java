@@ -44,6 +44,8 @@ public class PrintSubsetsSumtoK {
 			}
 			
 		}
+ 		
+//		System.out.println();
 		printSubsetsSumTok(CreateSmallArray(input), CreateBigArray(input[0], OutputSoFar),k-input[0]);
 		printSubsetsSumTok(CreateSmallArray(input), OutputSoFar,k);
 	}
