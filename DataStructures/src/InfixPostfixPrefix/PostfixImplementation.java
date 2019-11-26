@@ -20,25 +20,24 @@ public class PostfixImplementation {
 				x = operands.pop();
 				if(c=='*') {
 					operands.push(x*y);
-					break;
 				}
 				else if(c=='+') {
 					operands.push(x+y);
-					break;
 				}
 				else if(c=='/') {
 					operands.push(x/y);
-					break;
 				} 
 				else if(c=='-') {
 					operands.push(x-y);
-					break;
 				}
 			}
 		}
 		System.out.println(operands);
 	}
 	public static void main(String[] args) {
+		// AB-DE+F*/
+		// 74-12+1*/
+		System.out.println("Enter Postfix value expression");
           String input = TakeData.TakeString();
           EvaluateToPostfix(input);
 	}
